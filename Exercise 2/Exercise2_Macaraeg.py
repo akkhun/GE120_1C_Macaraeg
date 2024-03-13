@@ -16,6 +16,7 @@ while True:
   
     azimuth = float(input("AZIMUTH FROM THE SOUTH: ")) % 360
    
+# ASSIGNING AZIMUTH TO BEARING
     if azimuth > 0 and azimuth < 90:
         bearing = 'S {: ^10} W' .format(azimuth)
     elif azimuth > 90 and azimuth < 180:
@@ -49,7 +50,7 @@ while True:
         break
 
 print("\n\n")
-print('{: ^10} {: ^10} {: ^10}' .format("LINE NO.", "DISTANCE", "    BEARING"))
+print('{: ^10} {: ^10} {: ^10}' .format("LINE NO.", "DISTANCE", "    BEARING")) # ALIGN
 for line in lines: 
     print('{: ^10} {: ^10} {: ^10}' .format(line[0], line[1], line[2]))
     
