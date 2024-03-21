@@ -4,9 +4,10 @@ John Austin S. Macaraeg
 2023-13332
 BS Geodetic Engineering
 """
-
+# IMPORT DIFFERENT FUNCTIONS IN A MODULE
 from math import cos, sin, radians, sqrt 
 
+# CREATING MY OWN FUNCTION(S)
 def getLatitude(distance, azimuth):
     '''
     Compute for the latitude of a given line.
@@ -72,7 +73,7 @@ while True:
     azimuth = input("Azimuth from the South [DMS]: ")
     bearing = azimuthToBearing(azimuth)
 
-    if "-" in str(azimuth):
+    if "-" in str(azimuth): # DMS TO DD
         dms = azimuth
         degrees, minutes, seconds = azimuth.split("-")
         degrees, minutes, seconds = float(degrees), float(minutes), float(seconds)
@@ -80,6 +81,7 @@ while True:
     else:
         azimuth = float(azimuth)%360
 
+# DD TO DMS (TO SHOW IN BEARING)
     if azimuth > 0 and azimuth < 90:
         DD = float(azimuth)
         degree = int(DD)
@@ -158,7 +160,7 @@ while True:
     else:
         break
 
-# ALIGN
+# ALIGNMENT AND ORGANIZATION
 print("____________________________________________________________________________________________________________________________________________________")
 print("                                                                    TRAVERSE                                                                        ")
 
