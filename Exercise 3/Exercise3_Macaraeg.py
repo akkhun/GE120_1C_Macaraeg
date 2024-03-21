@@ -138,8 +138,8 @@ while True:
     sumDep += dep
     sumDist += float(distance)
 
-    constCorrLat = (-sumLat/sumDist)
-    constCorrDep = (-sumDep/sumDist)
+    constCorrLat = (-sumLat*(float(distance)/sumDist))
+    constCorrDep = (-sumDep*(float(distance)/sumDist))
 
     corr_lat = (constCorrLat * float(distance))
     corr_dep = (constCorrDep * float(distance))
