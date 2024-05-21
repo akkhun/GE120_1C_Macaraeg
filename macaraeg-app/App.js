@@ -40,6 +40,7 @@ export default function App() {
       }
   }
 
+  //SEPARATE INTO BOXES AND COMPILE THE INITIALIZED VALUES
   return (
     <View style={styles.box}>
       <View style={styles.box1}>
@@ -77,7 +78,7 @@ export default function App() {
         <Text style={styles.titleText}> {outputValue} </Text>
       </View>
         
-      <View style={styles.box4}>
+      <View style={styles.box4}> 
         <Image
           style={styles.image}
           source={jett}
@@ -85,8 +86,8 @@ export default function App() {
           contentFit="cover"
           transition={1000}
         />
-      </View>
-    </View>
+      </View> 
+    </View> 
   );
 }
 
